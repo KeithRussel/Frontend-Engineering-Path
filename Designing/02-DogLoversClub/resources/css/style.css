@@ -1,0 +1,257 @@
+/* GLOBALS */
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cute Font', cursive;
+}
+
+p, span, a {
+    font-family: 'Raleway', sans-serif;
+}
+
+/* COLOR MODEL */
+/* Black #242424 */
+
+/* HEADER */
+
+header {
+    background-color: #242424;
+    box-shadow: 2px 2px 2px #888;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    height: 80px;
+    margin: 0 30px;
+}
+
+nav > * {
+    flex: 1 1;
+}
+
+nav > a {
+    align-items: center;
+    display: flex;
+    text-decoration: none;
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    margin: 0;
+    justify-content: end;
+    align-items: center;
+    gap: 35px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: #fff;
+}
+
+/* HERO SECTION */
+
+#hero {
+    min-height: 45rem;
+    background-image: url('../images/Dalmatian-900x500.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#hero .content {
+    background-color: hsla(100, 50%, 10%, 0.3);
+    min-height: 45rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#hero .content h1 {
+    margin: 0;
+    font-size: 9rem;
+    color: #fff;
+    text-shadow: 1px 2px 2px #000;
+}
+
+#hero .content p {
+    margin: 0;
+    font-size: 2rem;
+    color: #fff;
+    text-shadow: 1px 2px 2px #000;
+}
+
+/* ABOUT */
+#about {
+    min-height: 40rem;
+}
+
+#about .container {
+    margin: 0 3rem;
+}
+
+#about .container .content {
+    display: flex;
+    margin: 1rem 0;
+    gap: 5px;
+}
+
+#about .container .content .col {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: stretch;
+    gap: 10px;
+    min-width: 24%;
+}
+
+#about .content .col > img {
+    width: 100%;
+    flex-grow: 1;
+    object-fit: cover;
+}
+
+/* EVENTS */
+#events {
+    min-height: 40rem;
+    background-color: #242424;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+#events .container {
+    margin: 0 3rem;
+}
+
+#events .container .content {
+    display: flex;
+}
+
+.content .info {
+    width: 30%;
+}
+
+.info h3 {
+    margin: 0;
+    font-size: 4rem;
+    line-height: 4rem;
+}
+
+.info p {
+    line-height: 1.5rem;
+}
+
+.content .schedule {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+}
+
+.schedule table {
+    border: 2px solid #fff;
+    border-collapse: collapse;
+    width: 80%;
+}
+
+table thead {
+    background-color: #000;
+}
+
+table tr {
+    border: 1px solid #fff;
+}
+
+table td {
+    text-align: center;
+}
+
+/* FOOTER */
+footer p {
+    text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+    /* HEADER */
+    nav {
+        height: 105px;
+    }
+
+    nav ul {
+        padding: 0.5rem;
+        justify-content: center;
+    }
+    
+    /* HERO BANNER */
+    #hero {
+        min-height: auto;
+    }
+
+    #hero .content {
+        min-height: 18rem;
+    }
+
+    #hero .content h1 {
+        font-size: 3rem;
+    }
+
+    #hero .content p {
+        font-size: 1rem;
+    }
+
+    /* ABOUT */
+    #about {
+        min-height: auto;
+    }
+
+    #about .container {
+        margin: 0.05rem;
+    }
+
+    #about .container .content {
+        flex-direction: column;
+    }
+
+    #about .container .content .col:nth-child(odd) {
+        display: none;
+    }
+
+    /* EVENTS */
+    #events {
+        min-height: auto;
+        flex-direction: column;
+        padding: 1rem 0;
+    }
+
+    #events .container {
+        margin: 0 1rem;
+    }
+
+    #events .container .content {
+        flex-direction: column;
+    }
+
+    .info h3 {
+        text-align: center;
+    }
+
+    .content .info, .content .schedule {
+        width: 100%;
+    }
+
+    .schedule table {
+        width: 100%;
+    }
+}
