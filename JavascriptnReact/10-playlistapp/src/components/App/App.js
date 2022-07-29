@@ -10,9 +10,9 @@ export class App extends React.Component {
     super(props);
 
     this.state = {
-      searchResults: [id, name, artist, album],
+      searchResults: [],
       playlistName: "New Playlist",
-      playlistTracks: [id, name, artist, album],
+      playlistTracks: [],
     };
 
     this.addTrack = this.addTrack.bind(this);
@@ -29,14 +29,18 @@ export class App extends React.Component {
     ) {
       return;
     }
+
+    this.state.playlistTracks.push(track);
+    this.setState({ playlistTracks: this.state.playlistTracks });
   }
   removeTrack(track) {
     let trackId = track.id;
 
     // use the trackId property to filter it out of playlistTracks
     let newPlaylistTracks = this.state.playlistTracks.filter(
-      (savedTrack) => savedTrack.id !== trackId
+      (removedTrack) => removedTrack.id !== trackId
     );
+    this.setState({ playlistTracks: newPlaylistTracks });
   }
   updatePlaylistName(name) {
     this.setState({
@@ -44,7 +48,11 @@ export class App extends React.Component {
     });
   }
   savePlaylist() {
-    let trackURIs = this.props.playlistTracks.map((track) => track.uri);
+    Spotify.savePlaylist();
+
+    this.setState({ playlistName: "New Playlist", playlistTracks: [] });
+    let trackURIs = this.state.playlistTracks.map((track) => track.uri);
+    return trackURIs;
   }
   search(term) {
     Spotify.search(term).then((searchResult) => {
@@ -69,6 +77,8 @@ export class App extends React.Component {
             />
             {/* <!-- Add a Playlist component --> */}
             <Playlist
+              playlistName={this.state.playlistName}
+              playlistTracks={this.state.playlistTracks}
               onRemove={this.removeTrack}
               onNameChange={this.updatePlaylistName}
               onSave={this.savePlaylist}
