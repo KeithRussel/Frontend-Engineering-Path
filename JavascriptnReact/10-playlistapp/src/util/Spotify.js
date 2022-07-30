@@ -34,17 +34,14 @@ const Spotify = {
       .then((jsonResponse) => {
         if (!jsonResponse.tracks) {
           return [];
-        } else {
-          return jsonResponse.tracks.items.map((track) => {
-            return {
-              id: track.id,
-              name: track.name,
-              artist: track.artists[0].name,
-              album: track.album.name,
-              uri: track.iri,
-            };
-          });
         }
+        return jsonResponse.tracks.items.map((track) => ({
+          id: track.id,
+          name: track.name,
+          artist: track.artists[0].name,
+          album: track.album.name,
+          uri: track.uri,
+        }));
       });
   },
   savePlaylist(name, trackURIs) {
