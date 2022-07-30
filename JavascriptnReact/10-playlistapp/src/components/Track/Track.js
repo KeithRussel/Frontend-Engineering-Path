@@ -41,7 +41,7 @@ export class Track extends React.Component {
         </div>
         {this.renderAction()}
 
-        <button className="Track-action"></button>
+        {/* <button className="Track-action"></button> */}
       </div>
     );
   }

@@ -17,6 +17,7 @@ export class Playlist extends React.Component {
         {/* <!-- Add a TrackList component --> */}
         <TrackList
           tracks={this.props.playlistTracks}
+          onAdd={this.props.onAdd}
           onRemove={this.props.onRemove}
           isRemoval={true}
         />

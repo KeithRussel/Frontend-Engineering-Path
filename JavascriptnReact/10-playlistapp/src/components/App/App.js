@@ -22,16 +22,14 @@ export class App extends React.Component {
     this.search = this.search.bind(this);
   }
   addTrack(track) {
-    let trackId = track.id;
+    let tracks = this.state.playlistTracks;
 
-    if (
-      this.state.playlistTracks.find((savedTrack) => savedTrack.id === trackId)
-    ) {
+    if (tracks.find((savedTrack) => savedTrack.id === track.id)) {
       return;
     }
 
-    this.state.playlistTracks.push(track);
-    this.setState({ playlistTracks: this.state.playlistTracks });
+    tracks.push(track);
+    this.setState({ playlistTracks: tracks });
   }
   removeTrack(track) {
     let trackId = track.id;
@@ -48,15 +46,19 @@ export class App extends React.Component {
     });
   }
   savePlaylist() {
-    Spotify.savePlaylist();
-
-    this.setState({ playlistName: "New Playlist", playlistTracks: [] });
     let trackURIs = this.state.playlistTracks.map((track) => track.uri);
-    return trackURIs;
+    Spotify.savePlaylist(this.state.playlistName, trackURIs).then(
+      (response) => {
+        console.log(response);
+        this.setState({ playlistName: "New Playlist", playlistTracks: [] });
+      }
+    );
+
+    console.log("Saving playlist", this.state.playlistName);
   }
   search(term) {
-    Spotify.search(term).then((searchResult) => {
-      this.setState({ searchResults: searchResult });
+    Spotify.search(term).then((searchResults) => {
+      this.setState({ searchResults: searchResults });
     });
     console.log("Searching for", term);
   }
