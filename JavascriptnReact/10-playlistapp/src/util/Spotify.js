@@ -1,7 +1,8 @@
 //Credits for WhiskeyRomeoLima at code academy.  I replaced my awful previous code with this one. Much cleaner and easy to understand.
 const clientId = "a659494b83f74e7289950de6c356e4ba";
 
-const redirectUri = "http://localhost:3000/callback/";
+// const redirectUri = "http://localhost:3000/callback/";
+const redirectUri = "http://russel-jammming.surge.sh";
 
 let accessToken = "";
 let userID;
