@@ -4,4 +4,4 @@
 | `07-Authorization Form` | **[Link](https://codepen.io/keiiiiithh/pen/ExEXpQv)** |
 | `10-Playlistapp` | **[Link](http://russel-jammming.surge.sh/)** |
 | `11-PassingThoughts` | **[Link](http://russel-passingthoughts.surge.sh/)** |
- 
+| `12-CopyCat` | **[Link](http://russel-copycat.surge.sh/)** |
