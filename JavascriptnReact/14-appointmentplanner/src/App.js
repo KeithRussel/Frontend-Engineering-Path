@@ -1,12 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import { Switch, Route, Redirect, NavLink } from "react-router-dom";
 
 import { AppointmentsPage } from "./containers/appointmentsPage/AppointmentsPage";
 import { ContactsPage } from "./containers/contactsPage/ContactsPage";
+import { useLocalStorage } from "./components/localStorage/localStorage";
 
 function App() {
-  const [appointments, setAppointments] = useState([]);
-  const [contacts, setContacts] = useState([]);
+  const [appointments, setAppointments] = useLocalStorage("appointments", []);
+  const [contacts, setContacts] = useLocalStorage("contacts", []);
 
   const ROUTES = {
     CONTACTS: "/contacts",

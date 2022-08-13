@@ -1,12 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import { AppointmentForm } from "../../components/appointmentForm/AppointmentForm";
 import { TileList } from "../../components/tileList/TileList";
+import { useLocalStorage } from "../../components/localStorage/localStorage";
 
 export const AppointmentsPage = ({
   appointments,
   addAppointment,
-  contacts
+  contacts,
 }) => {
   const [title, setTitle] = useState("");
   const [contact, setContact] = useState(
@@ -14,6 +15,10 @@ export const AppointmentsPage = ({
   );
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
+  const [appointmentsList, setAppointmentsList] = useLocalStorage(
+    "appointments",
+    []
+  );
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -23,6 +28,10 @@ export const AppointmentsPage = ({
     setDate("");
     setTime("");
   };
+
+  useEffect(() => {
+    setAppointmentsList(appointments);
+  }, [appointments, appointmentsList, setAppointmentsList]);
 
   return (
     <>
@@ -44,7 +53,7 @@ export const AppointmentsPage = ({
       <hr />
       <section>
         <h2>Appointments</h2>
-        <TileList tiles={appointments} />
+        <TileList tiles={appointmentsList} />
       </section>
     </>
   );
