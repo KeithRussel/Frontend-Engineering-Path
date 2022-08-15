@@ -8,3 +8,9 @@
 | `13-Pet Adoption` | **[Link](https://russel-routing-petadoption.netlify.app/)** |
 | `14-Appointment Planner` | **[Link](https://simpleappointmentplanner.netlify.app)** |
 | `14.5-Redux Road` | **[Link](https://gist.github.com/codecademydev/1cf8a159d792aad426fb3b5da9396d1c)** |
+
+
+| Gists Mini Challenges | Code Link |
+| --- | --- |
+| `1-Redux Road` | **[Link](https://gist.github.com/codecademydev/1cf8a159d792aad426fb3b5da9396d1c)** |
+| `2-Redux Lights on/off` | **[Link](https://gist.github.com/427ca53e2ec2fb2e9c0d8ace8c54697a)** |
