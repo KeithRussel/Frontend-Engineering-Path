@@ -10,7 +10,8 @@
 | `14.5-Redux Road` | **[Link](https://gist.github.com/codecademydev/1cf8a159d792aad426fb3b5da9396d1c)** |
 
 
-| Gists Mini Challenges | Code Link |
+| Gists of Some Lessons | Code Link |
 | --- | --- |
 | `1-Redux Road` | **[Link](https://gist.github.com/codecademydev/1cf8a159d792aad426fb3b5da9396d1c)** |
 | `2-Redux Lights on/off` | **[Link](https://gist.github.com/427ca53e2ec2fb2e9c0d8ace8c54697a)** |
+| `3-Redux Strategies for Complex State (Recipes App) ` | **[Link](https://gist.github.com/codecademydev/35bfdf9acd8370193d93c43d66986e73)** |
