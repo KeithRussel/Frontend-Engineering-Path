@@ -7,6 +7,7 @@
 | `12-CopyCat` | **[Link](http://russel-copycat.surge.sh/)** |
 | `13-Pet Adoption` | **[Link](https://russel-routing-petadoption.netlify.app/)** |
 | `14-Appointment Planner` | **[Link](https://simpleappointmentplanner.netlify.app)** |
+| `14-Matching Memory` | **[Link](https://redux-matching-memory.netlify.app/)** |
 
 
 | Gists of Some Lessons | Code Link |
