@@ -17,3 +17,6 @@
 | `3-Redux Strategies for Complex State (Recipes App) ` | **[Link](https://gist.github.com/codecademydev/35bfdf9acd8370193d93c43d66986e73)** |
 | `4-Redux Codecademy Store` | **[Link](https://gist.github.com/codecademydev/51aba28c7326151708fb333d12d43dce)** |
 | `5-React-Redux Library(Recipe App)` | **[Link](https://gist.github.com/codecademydev/4534eb9a35b44228e4de3a23ebf079c7)** |
+| `6-Refactoring with Redux Toolkit(Expense Tracker)` | **[Link](https://gist.github.com/codecademydev/482336f1b12e542dc7b977e5d8d17c90)** |
+| `7-createAsyncThunk comparison old vs with createAsyncThunk` | **[Link](https://gist.github.com/cbcfbfae923391902499ed6b75d418ca)** |
+| `8-Redux News Reader Project Challenge` | **[Link](https://gist.github.com/codecademydev/f94b8aad7f3fe3775ee03f8b3bf4c2cf)** |
